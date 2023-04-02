@@ -1,5 +1,13 @@
 package osmgr
 
+var (
+	disks []*Disk
+)
+
+func init() {
+	disks = ScanDisks()
+}
+
 type Disk struct {
 	Table      string       `json:"table,omitempty"`
 	Model      string       `json:"model,omitempty"`

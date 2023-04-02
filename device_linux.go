@@ -7,15 +7,7 @@ import (
 	"strings"
 )
 
-var (
-	disks []*Disk
-)
-
-func init() {
-	disks = scanDisks()
-}
-
-func scanDisks() []*Disk {
+func ScanDisks() []*Disk {
 	d := make([]*Disk, 0)
 	var lastDisk *Disk
 
